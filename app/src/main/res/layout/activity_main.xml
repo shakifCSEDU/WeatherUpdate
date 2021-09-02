@@ -5,16 +5,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     tools:context=".MainActivity">
 
-<EditText
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/editTextId"
-    android:hint="Enter Your city :"
-    android:textColorHint="#F18C8C"
-    android:padding="10dp"
-    />
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/editTextId"
+        app:errorEnabled="true"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select any city : "
+
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:inputType="textEmailAddress"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
 
 <Button
     android:layout_width="wrap_content"
@@ -26,17 +42,58 @@
     android:onClick="getWeather"
     />
 
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="Show Temperature"
-    android:id="@+id/textViewId"
-    android:textAppearance="?android:attr/textAppearanceLarge"
-    android:padding="5dp"
-    android:layout_margin="5dp"
-    />
+   <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show Temperature"
+        android:id="@+id/showTemperatureTextViewId"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:textColor="@color/black"
+        android:fontFamily="monospace"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Max Temperature"
+        android:id="@+id/maxTemperatureTextViewId"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:textColor="@color/black"
+        android:fontFamily="monospace"
+        />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Min Temperature"
+        android:id="@+id/minTemperatureTextViewId"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:textColor="@color/black"
+        android:fontFamily="monospace"
+        />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pressure "
+        android:id="@+id/pressureTextViewId"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:textColor="@color/black"
+        android:fontFamily="monospace"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Humidity "
+        android:id="@+id/humidityTextViewId"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:textColor="@color/black"
+        android:fontFamily="monospace"
+        />
 
 
 </LinearLayout>
